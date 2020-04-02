@@ -1,0 +1,160 @@
+Release Notes - Gemini Instrument Application Programmer Interface
+
+Version Release 16 : Performance improvements
+** Improvements
+    * [REL-3176] - Run under CentOS 7
+
+
+Version Release 15 : Performance improvements
+** Improvements
+    * [REL-2276] - Memory limit reached on the GMP
+
+
+Version Release 14 : New Epics Service Interface
+** New Feature
+    * [GIAPI-1035] - Add method getChannel to retrieve an EPICS channel
+
+
+Version Release 13.1: New Epics Service Interface
+** New Feature
+    * [GIAPI-795] - New Epics Service interface
+
+
+Version Release 13: Upgrade to ActiveMQ 3.4.0
+
+** Improvements
+    * [GIAPI-670] - Upgrade version of ActiveMQ CMS
+
+
+Version Release 12: Added timestamps to Status Items
+
+** New Feature
+    * [GIAPI-379] - Add timestamp to status items
+
+
+Version Release 11: Added configuration file to allow C++ client code
+to locate the GMP server in a remote location
+
+
+Version Release 10: Implementation of the postAncillaryFileEvent,
+postIntermediateFileEvent and systemLog methods. Several improvements
+to performance and fault tolerance. March 15, 2010
+
+** New Feature
+    * [GIAPI-60] - Add Systems Logging functionality to the GMP
+    * [GIAPI-62] - Add postAncillaryFileEvent to GMP
+    * [GIAPI-63] - Add postIntermediateFileEvent to GMP
+
+
+Version Release 9: Implementation of the getTCSContext method and simulation
+mechanism for testing. Added support for floating point values for status
+items. Implemented simulation mode for PCS Updater in the GMP. Synchrobus
+C library now is documented in doxygen (in a separate module). December 23, 2009
+
+** New Feature
+    * [GIAPI-114] - Add support for float values in status
+    * [GIAPI-59] - Add getTCSContext to Logging GMP
+    * [GIAPI-22] - Provide simulated getTCSContext testing capability in GMP
+
+** Improvements
+    * [GIAPI-58] - Added simulation mode to PCS Updater
+
+
+
+Version Release 8: Implementation of postPCSUpdate method to offload corrections
+to the Primary Control System. Added C library (in a separate package) to interface
+with the secondary . September 30, 2009
+
+** New Features
+    * [GIAPI-58] - Add postPCSUpdate to Logging GMP
+    * [GIAPI-90] - C library for access to Synchro Bus (in a separate package)
+    * [GIAPI-93] - Enable postPCSUpdate Post Functionality
+
+** Improvement
+    * [GIAPI-113] - Improved handling multiple responses for the APPLY sequence command
+                    in the GMP. Added test cases to verify fixes.
+
+
+Version Release 7: Added Observation event support and reboot testing
+                   functionality. July 21, 2009
+
+** New Features
+    * [GIAPI-19] - Add support for Reboot testing
+    * [GIAPI-61] - Add postObservationEvent to Logging GMP
+    * [GIAPI-69] - End to End Support and Testing of reboot Sequence Command
+    * [GIAPI-95] - Enable postObservationEvent support within Gemini
+                   infrastructure
+
+* Improvements
+    * [GIAPI-112] - Allow "fast" handler to complete successfully, even if they
+                    send complete information before a response has been sent
+                    to the invoker client.
+
+
+Version Release 6: Support to get EPICS information via simulated channels.
+Add fault tolerance mechanisms to GIAPI. April 09, 2009
+
+** New Features
+    * [GIAPI-106] - Add fault tolerance capabilities to Full GMP
+    * [GIAPI-21] - Provide simulated EPICS channels for testing subscribeEPICSStatus
+    * [GIAPI-57] - Add subscribeEPICSStatus/unsubscribeEPICSStatus method logging to Logging GMP
+    * [GIAPI-83] - Add full infrastructure support for subscribeEPICSStatus/unsubscribeEPICSStatus
+
+** Improvement
+    * [GIAPI-107] - Remove char * from public C++ interface
+    * [GIAPI-108] - Add timeout to getProperty methods
+
+Version Release 5: Support for Status publishing and Properties. February 04, 2009
+
+  * [GIAPI-103] - Add getProperty mechanism to Logging GMP
+  * [GIAPI-104] - Add property handling mechanism to full GMP to provide support to the getProperty Methods
+  * [GIAPI-53] - Add postStatus logging to Logging GMP
+  * [GIAPI-64] - Add postStatus to Full GIAPI
+  * [GIAPI-81] - Add infrastructure support for status posting and private receiving of status
+
+
+Version Release 4: Add support for the apply sequence command. GIAPI released
+                   conforming the Gemini RPM framework
+                   24 October, 2008
+
+  * [GIAPI-80] - Add support for Apply Sequence command to full GMP
+  * [GIAPI-20] - Add support for Apply Sequence command testing
+  * [GIAPI-99] - Add exceptions to C++ Language glue
+
+
+Version Release 3: Provides functionality to test init sequence command from
+                   end to end. GIAPI released in 64-bits binary format.
+                   01 September, 2008
+
+  * [GIAPI-16] - Add initial GMP Testing framework
+  * [GIAPI-18] - Add support for Sequence Command other than Apply and Reboot
+  * [GIAPI-65] - Add Sequence Command methods to Full GMP
+  * [GIAPI-70] - End to End support and testing of init Sequence Command
+
+
+Version Release 2: GIAPI First Gemini Master Process and basic infrastructure
+                   for sequence commands. July 25, 2008
+
+  * [GIAPI-14] - Initial Logging GMP into OSGi container
+  * [GIAPI-15] - Add logging service to GMP
+  * [GIAPI-17] - Add logging support for commands from Gemini
+  * [GIAPI-54] - Add sequence commands methods to Logging GMP
+  * [GIAPI-82] - Sequence Command Handler support
+
+Version Release 1: GIAPI Logging C++. February 29, 2008
+
+  * [GIAPI-23] - Add postStatus to Logging C++ Language Glue
+  * [GIAPI-24] - Add alarm support to Logging C++ Language Glue
+  * [GIAPI-25] - Add health support to Logging C++ Language Glue
+  * [GIAPI-28] - Add sequence command methods to Logging C++ Language Glue
+  * [GIAPI-29] - Add subscribeEPICStatus/unsubscribeEPICSStatus to Logging C++
+                 Language Glue
+  * [GIAPI-30] - Add postPCSUpdate to Logging C++ Language Glue
+  * [GIAPI-31] - Add getTCSContext to Logging C++ Language Glue
+  * [GIAPI-32] - Add Process Logging to C++ Language Glue
+  * [GIAPI-33] - Add System Logging to C++ Language Glue
+  * [GIAPI-34] - Add getObservatoryTime to Logging C++ Language Glue
+  * [GIAPI-35] - Add postObservationEvent to Logging C++ Language Glue
+  * [GIAPI-36] - Add postAncillaryFileEvent to Logging C++ Language Glue
+  * [GIAPI-37] - Add postIntermediateFileEvent to Logging C++ Language Glue
+
